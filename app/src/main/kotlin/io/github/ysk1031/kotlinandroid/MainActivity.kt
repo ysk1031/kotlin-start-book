@@ -12,14 +12,17 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val listAdapter = ArticleListAdapter(context = this)
         val articles: List<Article> = listOf(
                 dummyArticle(title = "Kotlin入門", userName = "Yusuke"),
                 dummyArticle(title = "Java入門", userName = "Aono"))
-        listAdapter.setArticles(articles)
+        val listAdapter = ArticleListAdapter(context = this, articles = articles)
 
         val listView: ListView = findViewById(R.id.list_view)
         listView.adapter = listAdapter
+        listView.setOnItemClickListener { adapterView, view, position, id ->
+            val article: Article = articles[position]
+            ArticleActivity.intent(this, article).let { startActivity(it) }
+        }
     }
 
     private fun dummyArticle(title: String, userName: String): Article =
