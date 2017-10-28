@@ -20,4 +20,8 @@ class ArticleListAdapter(private val context: Context, private var articles: Lis
     override fun getItemId(p0: Int): Long = 0
 
     override fun getCount(): Int = articles.size
+
+    fun setArticles(articles: List<Article>) {
+        this.articles = articles
+    }
 }
