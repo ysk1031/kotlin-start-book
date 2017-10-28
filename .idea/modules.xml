@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/KotlinAndroid.iml" filepath="$PROJECT_DIR$/KotlinAndroid.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/kotlin-start-book.iml" filepath="$PROJECT_DIR$/kotlin-start-book.iml" />
     </modules>
   </component>
 </project>
